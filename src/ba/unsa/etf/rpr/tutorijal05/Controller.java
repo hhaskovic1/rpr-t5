@@ -75,4 +75,38 @@ public class Controller {
 
     }
 
+    public void zeroClick(ActionEvent actionEvent) { DodajCifru(0);}
+    public void oneClick(ActionEvent actionEvent) { DodajCifru(1);}
+    public void twoClick(ActionEvent actionEvent) { DodajCifru(2); }
+    public void threeClick(ActionEvent actionEvent) { DodajCifru(3); }
+    public void fourClick(ActionEvent actionEvent) { DodajCifru(4); }
+    public void fiveClick(ActionEvent actionEvent) { DodajCifru(5); }
+    public void sixClick(ActionEvent actionEvent) { DodajCifru(6); }
+    public void sevenClick(ActionEvent actionEvent) { DodajCifru(7); }
+    public void eightClick(ActionEvent actionEvent) { DodajCifru(8); }
+    public void nineClick(ActionEvent actionEvent) { DodajCifru(9);}
+    public void dotBtn(ActionEvent actionEvent) {
+        if(decimalni==false)tekst.set(tekst.get()+dotBtn.getText());
+        // if(tekst.get()==".")tekst.set("0.");
+        decimalni=true;
+    }
+    public void plusBtn(ActionEvent actionEvent) {
+        prviBroj=tekst.get();
+        tekst.set("");
+    }
+    public void minusBtn(ActionEvent actionEvent) {
+        minus=tekst.get();
+        tekst.set("");
+    }
+    public void productBtn(ActionEvent actionEvent) {
+        product=tekst.get();
+        tekst.set("");
+    }
+    public void divideBtn(ActionEvent actionEvent) {
+        divide=tekst.get();
+        tekst.set("");
+    }
+
+
+
 }
