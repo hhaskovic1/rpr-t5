@@ -107,6 +107,42 @@ public class Controller {
         tekst.set("");
     }
 
+    public void equalsBtn(ActionEvent actionEvent) {
+        decimalni=false;
+        drugiBroj=tekst.get();
+        String broj="";
+        double br2=Double.parseDouble((drugiBroj));
+        if(prviBroj!="") {
+            double br1 = Double.parseDouble(prviBroj);
+            double jednako = br1 + br2;
+            broj = Double.toString(jednako);
+        }
+        if(minus!="") {
+            double br1 = Double.parseDouble(minus);
+            double jednako = br1 - br2;
+            broj = Double.toString(jednako);
+        }
+        if(product!="") {
+            double br1 = Double.parseDouble(product);
+            double jednako = br1*br2;
+            broj = Double.toString(jednako);
+        }
+        if(divide!="") {
+            double br1 = Double.parseDouble(divide);
+            double jednako = br1/br2;
+            broj = Double.toString(jednako);
+            if(br2==0 || Math.abs(br2-0)<0.001) broj="Nije dozvoljeno";
 
+        }
+        tekst.set(broj);
+    }
+    public void percentBtn(ActionEvent actionEvent) {
+        String posto=tekst.get();
+        tekst.set(tekst.get()+percentBtn.getText());
+        double br1=Double.parseDouble(posto);
+        br1/=100;
+        posto=Double.toString(br1);
+        tekst.set(posto);
+    }
 
 }
