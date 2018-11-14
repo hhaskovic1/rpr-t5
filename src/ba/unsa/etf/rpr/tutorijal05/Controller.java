@@ -13,4 +13,16 @@ public class Controller {
         tekst = new SimpleStringProperty("0");
     }
 
+    public String getTekst() {
+        return tekst.get();
+    }
+
+    public SimpleStringProperty tekstProperty() {
+        return tekst;
+    }
+
+    public void setTekst(String tekst) {
+        this.tekst.set(tekst);
+    }
+
 }
