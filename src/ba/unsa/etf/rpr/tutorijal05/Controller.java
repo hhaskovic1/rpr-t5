@@ -87,7 +87,6 @@ public class Controller {
     public void nineClick(ActionEvent actionEvent) { DodajCifru(9);}
     public void dotBtn(ActionEvent actionEvent) {
         if(decimalni==false)tekst.set(tekst.get()+dotBtn.getText());
-        // if(tekst.get()==".")tekst.set("0.");
         decimalni=true;
     }
     public void plusBtn(ActionEvent actionEvent) {
